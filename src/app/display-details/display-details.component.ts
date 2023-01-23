@@ -7,8 +7,12 @@ import { Component } from '@angular/core';
 })
 export class DisplayDetailsComponent {
   isVisible: boolean = true;
+  firstNumber = 1;
+  list: number[] = [];
 
-  onShowText() {
+  onClickBtn() {
     this.isVisible = this.isVisible ? false : true;
+    this.list.push(this.firstNumber);
+    this.firstNumber += 1;
   }
 }
